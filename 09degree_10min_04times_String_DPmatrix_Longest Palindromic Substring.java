@@ -8,7 +8,7 @@ public class Solution {
           Arrays.fill(mat[i],false);
           mat[i][i] = true;  
         } 
-        int start = 0 , maxLength = 1;
+        int start = 0 , maxLength = 0;
         for(int k = 1; k < len ; k++){
             for(int i = 0 ; i < len -k ; i++){
                 if(s.charAt(i) != s.charAt(k+i)) continue;
@@ -21,6 +21,6 @@ public class Solution {
                 }
             }
         }
-        return s.substring(i,k);
+        return s.substring(start,start + maxLength+1);
     }
 }
